@@ -18,7 +18,7 @@
     ],
     "autoload": {
         "psr-4": {
-          "coprixnemanja\\Athena\\": "src/"
+          "Bilaliqbalr\\Athena\\": "src/"
         }
     },
     "extra": {
