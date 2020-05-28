@@ -260,7 +260,8 @@ class Connection extends PostgresConnection
             'QueryExecutionContext' => ["Database" => $this->config['database']],
             'ResultConfiguration' => [
                 'OutputLocation' => $this->config['s3output']
-            ]
+            ],
+            'WorkGroup' => $this->config['work_group']
         ];
 
         $response = $this->athenaClient->startQueryExecution($param_Query);
@@ -338,7 +339,7 @@ class Connection extends PostgresConnection
         if ($executionResponse = $this->executeQuery($query, $bindings)) {
             $S3OutputLocation = $executionResponse['QueryExecution']['ResultConfiguration']['OutputLocation'];
             $s3FilePath = '/' . $this->config['output_folder'] . '/' . basename($S3OutputLocation);
-            $localFilePath = storage_path('exports/' . basename($s3FilePath));
+            $localFilePath = storage_path(basename($s3FilePath));
 
             if ($this->downloadFileFromS3ToLocalServer($s3FilePath, $localFilePath)) {
                 $this->localFilePath = $localFilePath;
