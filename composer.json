@@ -24,7 +24,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "coprixnemanja\\Athena\\AthenaServiceProvider"
+                "Bilaliqbalr\\Athena\\AthenaServiceProvider"
             ]
         }
     }
