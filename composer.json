@@ -1,5 +1,5 @@
 {
-    "name": "alipeng/laravel-athena",
+    "name": "coprixnemanja/laravel-athena",
     "description": "Laravel athena query builder.",
     "type": "library",
     "require": {
@@ -18,13 +18,13 @@
     ],
     "autoload": {
         "psr-4": {
-          "Bilaliqbalr\\Athena\\": "src/"
+          "coprixnemanja\\Athena\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Bilaliqbalr\\Athena\\AthenaServiceProvider"
+                "coprixnemanja\\Athena\\AthenaServiceProvider"
             ]
         }
     }
